@@ -14,7 +14,7 @@ public class Main {
     // PARAMS
     double learningRate = 0.3;
     int numOfEpochs = 10000;
-    int numOfHiddenLayers = 8;
+    int numOfHiddenNodes = 8;
     // ---------
 
     public Main() {
@@ -33,7 +33,7 @@ public class Main {
         createSet();
 
         // 4 input, 8 hidden layers, 1 output
-        int[] layerSizes = new int[] { 4, numOfHiddenLayers, 1 };
+        int[] layerSizes = new int[] { 4, numOfHiddenNodes, 1 };
         net = new Network(layerSizes);
 
         // train the net with number of iterations and a learning rate
@@ -148,7 +148,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Learning rate: " + learningRate + "|" + " Number of epochs: " + numOfEpochs + "|"
-                + " Number of hidden nodes: " + numOfHiddenLayers);
+                + " Number of hidden nodes: " + numOfHiddenNodes);
 
         System.out.println();
 
