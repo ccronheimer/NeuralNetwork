@@ -2,6 +2,13 @@
 Feed forward neural network using backpropagation in Java.
 This network is trained to detect parity bits in a set of 4 bit strings.
 
+#### Parity Bit
+``
+"A parity bit is an extra bit included in binary message to make total number of 1's either odd or even.
+For example, to check a binary sequence with even parity, the total number of ones can be counted. If the number of ones is not even, an error is likely to have occurred."
+``
+
+
 ### Parameters
 ```java
 //params to play around with 
@@ -9,6 +16,21 @@ double learningRate;
 int numOfEpochs;
 int numOfHiddenNodes; 
 ```
+
+
+### Example View
+Single layer network with four inputs to represent each bit for our 4 bit string
+and one output that represents the expected parity bit. 
+
+
+```
+* parity bit example *
+
+1101 (odd) = 1 
+1111 (even) = 0 
+```
+
+![](Assets/NN.png)
 
 ### Output
 Example output for a single layer network with 8 hidden nodes.
@@ -34,5 +56,3 @@ Training Example: [1.0, 1.0, 0.0, 1.0]| Expected: [0.0]| MSE: 6.075926926361776E
 Training Example: [1.0, 1.0, 1.0, 0.0]| Expected: [0.0]| MSE: 2.2649364455795536E-5| Output: [0.006729940713774166]
 Training Example: [1.0, 1.0, 1.0, 1.0]| Expected: [1.0]| MSE: 1.7430312209036617E-4| Output: [0.9813385062303336]
 ```
-
-
